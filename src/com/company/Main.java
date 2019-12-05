@@ -7,9 +7,9 @@ public class Main {
         int lastIndex = znach.length-1;
         while ((firstindex <= lastIndex) && (element>=znach[firstindex]) && (element<=znach[lastIndex])){
 
-            int res = firstindex +
-                    (((lastIndex-firstindex) /(znach[lastIndex]-znach[firstindex]))
-                            *(element-znach[firstindex]));
+            int res = firstindex + (element-znach[firstindex])
+                    * (lastIndex-firstindex) /
+                    (znach[lastIndex]-znach[firstindex]);
 
             if (znach[res]==element){
                 return res;
